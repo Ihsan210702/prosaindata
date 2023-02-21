@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRAWLING TWITTER USING TWINT &#8212; Fajrul Ihsan Kamil_200411100172</title>
+    <title>CRAWLING TWITTER &#8212; Fajrul Ihsan Kamil_200411100172</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Install modul Beautifulsoup dan requests" href="CrawlingWebBerita.html" />
+    <link rel="next" title="CRAWLING WEBSITE BERITA" href="CrawlingWebBerita.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="_static/logo.png" class="logo" alt="logo">
+      <img src="_static/logo.jpeg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Fajrul Ihsan Kamil_200411100172</h1>
@@ -120,17 +120,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   CRAWLING TWITTER USING TWINT
+   CRAWLING TWITTER
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="CrawlingWebBerita.html">
-   1. Install modul Beautifulsoup dan requests
+   CRAWLING  WEBSITE BERITA
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="CrawlingWebPTA.html">
-   Crawling data Website https://pta.trunojoyo.ac.id/
+   CRAWLING WEBSITE PTA
   </a>
  </li>
 </ul>
@@ -368,7 +368,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CRAWLING TWITTER USING TWINT</h1>
+                <h1>CRAWLING TWITTER</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -408,8 +408,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="crawling-twitter-using-twint">
-<h1>CRAWLING TWITTER USING TWINT<a class="headerlink" href="#crawling-twitter-using-twint" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="crawling-twitter">
+<h1>CRAWLING TWITTER<a class="headerlink" href="#crawling-twitter" title="Permalink to this headline">#</a></h1>
+<p>Crawling data twitter tentang Cak Imin menggunakan twint</p>
+<hr class="docutils" />
 <div class="section" id="install-modul-twint">
 <h2>1. Install Modul Twint<a class="headerlink" href="#install-modul-twint" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
@@ -422,200 +424,20 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;twint&#39;...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>remote: Enumerating objects: 47, done.
-remote: Counting objects:   2% (1/47)
-remote: Counting objects:   4% (2/47)
-remote: Counting objects:   6% (3/47)
-remote: Counting objects:   8% (4/47)
-remote: Counting objects:  10% (5/47)
-remote: Counting objects:  12% (6/47)
-remote: Counting objects:  14% (7/47)
-remote: Counting objects:  17% (8/47)
-remote: Counting objects:  19% (9/47)
-remote: Counting objects:  21% (10/47)
-remote: Counting objects:  23% (11/47)
-remote: Counting objects:  25% (12/47)
-remote: Counting objects:  27% (13/47)
-remote: Counting objects:  29% (14/47)
-remote: Counting objects:  31% (15/47)
-remote: Counting objects:  34% (16/47)
-remote: Counting objects:  36% (17/47)
-remote: Counting objects:  38% (18/47)
-remote: Counting objects:  40% (19/47)
-remote: Counting objects:  42% (20/47)
-remote: Counting objects:  44% (21/47)
-remote: Counting objects:  46% (22/47)
-remote: Counting objects:  48% (23/47)
-remote: Counting objects:  51% (24/47)
-remote: Counting objects:  53% (25/47)
-remote: Counting objects:  55% (26/47)
-remote: Counting objects:  57% (27/47)
-remote: Counting objects:  59% (28/47)
-remote: Counting objects:  61% (29/47)
-remote: Counting objects:  63% (30/47)
-remote: Counting objects:  65% (31/47)
-remote: Counting objects:  68% (32/47)
-remote: Counting objects:  70% (33/47)
-remote: Counting objects:  72% (34/47)
-remote: Counting objects:  74% (35/47)
-remote: Counting objects:  76% (36/47)
-remote: Counting objects:  78% (37/47)
-remote: Counting objects:  80% (38/47)
-remote: Counting objects:  82% (39/47)
-remote: Counting objects:  85% (40/47)
-remote: Counting objects:  87% (41/47)
-remote: Counting objects:  89% (42/47)
-remote: Counting objects:  91% (43/47)
-remote: Counting objects:  93% (44/47)
-remote: Counting objects:  95% (45/47)
-remote: Counting objects:  97% (46/47)
-remote: Counting objects: 100% (47/47)
-remote: Counting objects: 100% (47/47), done.
-remote: Compressing objects:   2% (1/44)
-remote: Compressing objects:   4% (2/44)
-remote: Compressing objects:   6% (3/44)
-remote: Compressing objects:   9% (4/44)
-remote: Compressing objects:  11% (5/44)
-remote: Compressing objects:  13% (6/44)
-remote: Compressing objects:  15% (7/44)
-remote: Compressing objects:  18% (8/44)
-remote: Compressing objects:  20% (9/44)
-remote: Compressing objects:  22% (10/44)
-remote: Compressing objects:  25% (11/44)
-remote: Compressing objects:  27% (12/44)
-remote: Compressing objects:  29% (13/44)
-remote: Compressing objects:  31% (14/44)
-remote: Compressing objects:  34% (15/44)
-remote: Compressing objects:  36% (16/44)
-remote: Compressing objects:  38% (17/44)
-remote: Compressing objects:  40% (18/44)
-remote: Compressing objects:  43% (19/44)
-remote: Compressing objects:  45% (20/44)
-remote: Compressing objects:  47% (21/44)
-remote: Compressing objects:  50% (22/44)
-remote: Compressing objects:  52% (23/44)
-remote: Compressing objects:  54% (24/44)
-remote: Compressing objects:  56% (25/44)
-remote: Compressing objects:  59% (26/44)
-remote: Compressing objects:  61% (27/44)
-remote: Compressing objects:  63% (28/44)
-remote: Compressing objects:  65% (29/44)
-remote: Compressing objects:  68% (30/44)
-remote: Compressing objects:  70% (31/44)
-remote: Compressing objects:  72% (32/44)
-remote: Compressing objects:  75% (33/44)
-remote: Compressing objects:  77% (34/44)
-remote: Compressing objects:  79% (35/44)
-remote: Compressing objects:  81% (36/44)
-remote: Compressing objects:  84% (37/44)
-remote: Compressing objects:  86% (38/44)
-remote: Compressing objects:  88% (39/44)
-remote: Compressing objects:  90% (40/44)
-remote: Compressing objects:  93% (41/44)
-remote: Compressing objects:  95% (42/44)
-remote: Compressing objects:  97% (43/44)
-remote: Compressing objects: 100% (44/44)
-remote: Compressing objects: 100% (44/44), done.
-remote: Total 47 (delta 3), reused 14 (delta 0), pack-reused 0
-Unpacking objects:   2% (1/47)
-Unpacking objects:   4% (2/47)
-Unpacking objects:   6% (3/47)
-Unpacking objects:   8% (4/47)
-Unpacking objects:  10% (5/47)
-Unpacking objects:  12% (6/47)
-Unpacking objects:  14% (7/47)
-Unpacking objects:  17% (8/47)
-Unpacking objects:  19% (9/47)
-Unpacking objects:  21% (10/47)
-Unpacking objects:  23% (11/47)
-Unpacking objects:  25% (12/47)
-Unpacking objects:  27% (13/47)
-Unpacking objects:  29% (14/47)
-Unpacking objects:  31% (15/47)
-Unpacking objects:  34% (16/47)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unpacking objects:  36% (17/47)
-Unpacking objects:  38% (18/47)
-Unpacking objects:  40% (19/47)
-Unpacking objects:  42% (20/47)
-Unpacking objects:  44% (21/47)
-Unpacking objects:  46% (22/47)
-Unpacking objects:  48% (23/47)
-Unpacking objects:  51% (24/47)
-Unpacking objects:  53% (25/47)
-Unpacking objects:  55% (26/47)
-Unpacking objects:  57% (27/47)
-Unpacking objects:  59% (28/47)
-Unpacking objects:  61% (29/47)
-Unpacking objects:  63% (30/47)
-Unpacking objects:  65% (31/47)
-Unpacking objects:  68% (32/47)
-Unpacking objects:  70% (33/47)
-Unpacking objects:  72% (34/47)
-Unpacking objects:  74% (35/47)
-Unpacking objects:  76% (36/47)
-Unpacking objects:  78% (37/47)
-Unpacking objects:  80% (38/47)
-Unpacking objects:  82% (39/47)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unpacking objects:  85% (40/47)
-Unpacking objects:  87% (41/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects:  89% (42/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects:  91% (43/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects:  93% (44/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects:  95% (45/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects:  97% (46/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects: 100% (47/47), 36.37 KiB | 70.00 KiB/s
-Unpacking objects: 100% (47/47), 42.93 KiB | 72.00 KiB/s, done.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: destination path &#39;twint&#39; already exists and is not an empty directory.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/bin/bash: line 0: cd: /content/twint: No such file or directory
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp==3.7.0
-  Downloading aiohttp-3.7.0-cp38-cp38-manylinux2014_x86_64.whl (1.5 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.5 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.5/1.5 MB</span> <span class=" -Color -Color-Red">50.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting async-timeout&lt;4.0,&gt;=3.0
-  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (6.0.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting chardet&lt;4.0,&gt;=2.0
-  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/133.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">133.4/133.4 KB</span> <span class=" -Color -Color-Red">14.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (1.8.2)
+Requirement already satisfied: aiohttp==3.7.0 in /usr/local/lib/python3.8/dist-packages (3.7.0)
+Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.1)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (1.8.2)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (21.4.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (6.0.4)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: chardet, async-timeout, aiohttp
-  Attempting uninstall: chardet
-    Found existing installation: chardet 4.0.0
-    Uninstalling chardet-4.0.0:
-      Successfully uninstalled chardet-4.0.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: async-timeout
-    Found existing installation: async-timeout 4.0.2
-    Uninstalling async-timeout-4.0.2:
-      Successfully uninstalled async-timeout-4.0.2
-  Attempting uninstall: aiohttp
-    Found existing installation: aiohttp 3.8.4
-    Uninstalling aiohttp-3.8.4:
-      Successfully uninstalled aiohttp-3.8.4
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiohttp-3.7.0 async-timeout-3.0.1 chardet-3.0.4
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
@@ -913,7 +735,7 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
     <a class='right-next' id="next-link" href="CrawlingWebBerita.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1. Install modul Beautifulsoup dan requests</p>
+        <p class="prev-next-title">CRAWLING  WEBSITE BERITA</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
