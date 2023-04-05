@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">CRAWLING  WEBSITE BERITA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CrawlingWebPTA.html">CRAWLING WEBSITE PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipelines.html">Pipelines menggunakan Orchest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">Klasifikasi Teks</a></li>
 </ul>
 
     </div>
@@ -418,15 +419,16 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (2.25.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests) (1.26.14)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests) (2.10)
+Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (2.27.1)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests) (2.0.12)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests) (3.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests) (2022.12.7)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests) (4.0.0)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests) (1.26.15)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-packages (4.6.3)
+Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from BeautifulSoup4) (2.4)
 </pre></div>
 </div>
 </div>
@@ -498,366 +500,118 @@ Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-fd00510a-f13d-4caa-b180-3747a0f049ee">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-3-19009141d11f&gt;</span> in <span class="ni">&lt;cell line: 13&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> 
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">if</span> <span class="n">link</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">27</span>       <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.goal.com/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">link</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>       <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>       <span class="n">items2</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="s2">&quot;article-body_body__JAkqy body&quot;</span><span class="p">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">75</span><span class="s2">     return request(&#39;get&#39;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span><span class="s2"> </span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Judul Berita</th>
-      <th>Isi Berita</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>"Saya Tidak Percaya!" - Havertz Heran Kenapa O...</td>
-      <td>APA YANG TERJADI?   Pemain internasional Jerma...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hazard Tidak Berencana Tinggalkan Real Madrid</td>
-      <td>APA YANG TERJADI? Kontrak Eden Hazard berlangs...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Pellegrini: Kekalahan 7-0 Tak Ada Kaitan Denga...</td>
-      <td>Pelatih Real Betis Manuel Pellegrini melakukan...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Persija Ditekuk Borneo, Andritany: Makin Berat...</td>
-      <td>Penjaga gawang Persija Jakarta Andritany Ardhi...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>TONTON: Thiago Silva MARAH, Sebut Bellingham B...</td>
-      <td>APA YANG TERJADI? Thiago Silva yang cedera han...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Rashford: Saya Cuma Ingat Kemenangan Lawan Liv...</td>
-      <td>Striker Manchester United Marcus Rashford mene...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Jesus Akan Kembali Bermain Untuk Arsenal</td>
-      <td>APA YANG TERJADI? Striker Gabriel Jesus belum ...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Kepercayaan Bos Ten Hag! Fernandes Tetap Kapte...</td>
-      <td>APA YANG TERJADI? Ten Hag menyatakan bahwa Fer...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Level Pemain Persib Menurun Sejak Dikalahkan PSM</td>
-      <td>APA YANG TERJADI? Pelatih Persib Bandung Luis ...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Dosa Masa Lalu! PSG Kalah Gugatan Lawan Ben Ar...</td>
-      <td>APA YANG TERJADI? Mantan pemain depan PSG, Ben...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Mohamed Salah. Legenda Liverpool. NO Debat.</td>
-      <td>Mungkin tak pernah terbayangkan sebelumnya.</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Manchester City Siap Dapatkan Gvardiol</td>
-      <td>APA YANG TERJADI? Tiga klub Liga Primer Inggri...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Duet Osimhen &amp; Rashford Bikin Lawan MU Ketar-K...</td>
-      <td>APA YANG TERJADI? Striker Napoli, Osimhen munc...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Dibekap Borneo FC, Persija Gagal Gusur Persib</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Fabinho: Firmino Harus Bertahan Selamanya!</td>
-      <td>APA YANG TERJADI? GOAL mengkonfirmasi, Roberto...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Can: Dortmund Kalah Lawan Chelsea Karena Wasit...</td>
-      <td>APA YANG TERJADI? Chelsea membalikkan defisit ...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Dihajar Persik Kediri, Persib Bandung Makin Be...</td>
-      <td>Harapan Persib Bandung untuk memangkas jarak p...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Galtier: PSG Lebih Berimbang Tanpa Neymar</td>
-      <td>APA YANG TERJADI? Dengan Neymar absen untuk ke...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Dicap Berkhianat, Ini Alasan Weghorst Sentuh S...</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Tottenham Hotspur Mau Juara Liga Champions</td>
-      <td>Tottenham Hotspur menjadi klub yang kering gel...</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Indonesia Satu-Satunya Wakil ASEAN Di Piala Du...</td>
-      <td>Timnas Indonesia U-20 dipastikan menjadi satu-...</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>"Keputusan Lawak!" - Bellingham AMUK Wasit Che...</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Sudah Tahu? Mengapa Kai Havertz Boleh Ulang Pe...</td>
-      <td>APA YANG TERJADI? Para pemain Borussia Dortmun...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>Wow! Barca Ditawari "Bantuan VAR" Oleh Bekas P...</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Piala Asia U-20 Selesai, STY Siap Ubah Pemain ...</td>
-      <td>Selesai sudah perjuangan timnas Indonesia U-20...</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>Barca Bakal Diseret Ke Pengadilan!</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>Gagal Di Piala Asia U-20, Pemain Timnas Indone...</td>
-      <td>Timnas Indonesia U-20 gagal lolos dari fase gr...</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Jadwal Siaran Langsung TV Hari Ini</td>
-      <td>Musim kompetisi 2022/23 di liga-liga Eropa dim...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Wow! Indonesia Bikin Takjub Bundesliga Karena ...</td>
-      <td>Sebagai negara kuat di sepakbola dengan pembin...</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>"Jadi Pelatih Barca Adalah Hari-Hari Terburuk ...</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>Kvaratskhelia Hatinya Terikat Madrid Karena Le...</td>
-      <td>APA YANG TERJADI? Legenda Real Madrid Guti men...</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>Masih Mau Gelari Nunez 'Lord'? Intip Statistik...</td>
-      <td>APA YANG TERJADI? Darwin Nunez kerap dijuluki ...</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>Kelabu Milan Di Inggris: Waktunya Memutus Rant...</td>
-      <td>APA YANG TERJADI? AC Milan dalam konfidensi ti...</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>Macheda: Kisah Menukiknya Karier Pahlawan United</td>
-      <td>Federico Macheda memiliki tempat unik dalam se...</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>Mengapa Banyak Klub Spanyol Memakai Nama Real?</td>
-      <td>Seperti yang sudah diketahui, klub-klub di dun...</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>Cuma Potter Yang Bisa! Rekor Ikonis Si Manajer...</td>
-      <td>APA YANG TERJADI? Keberhasilan Chelsea membali...</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>Madrid &amp; Klub Paling Sering Lolos Ke Final Lig...</td>
-      <td>Melaju ke babak final Liga Champions tentu buk...</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>5 Catatan Ganteng Potter Saat Tendang Dortmund</td>
-      <td>Mari kita katakan, Graham Potter 'resmi' diper...</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>Mount Ke Newcastle ? The Magpies Saingi Liverpool</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>Madrid Bakal Berunding Dengan Hazard Soal Masa...</td>
-      <td>APA YANG TERJADI?</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>Rating Pemain Chelsea: Havertz Jaga Mimpi The ...</td>
-      <td>Chelsea berhasil bangkit setelah kalah 1-0 di ...</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>Comeback! Chelsea Melangkah Ke 8 Besar UCL Usa...</td>
-      <td>APA YANG TERJADI?    Tim asuhan Graham Potter ...</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>Piala Asia U-20 2023: Jadwal TV Lengkap, Hasil...</td>
-      <td>Tim nasional junior Indonesia bakal berkompeti...</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>Pesta Gol Ke Gawang Brugge, Benfica Amankan Ti...</td>
-      <td>APA YANG TERJADI?    As Aguias sukses menggila...</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>Siapa Topskor Liga Champions Sepanjang Masa?</td>
-      <td>Liga Champions menghadirkan beberapa pencetak ...</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>Mengapa Pertandingan Chelsea Vs Dortmund Sempa...</td>
-      <td>APA YANG TERJADI?   Ada laporan bus Dortmund k...</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>Pelatih Uzbekistan: Lepas Tembakan Jarak Jauh ...</td>
-      <td>Pelatih Uzbekistan Ravshan Khaydarov memberika...</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>Shin Tae-Yong Puji Pertahanan Timnas U-20</td>
-      <td>APA YANG TERJADI? Pelatih timnas Indonesia U-2...</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>Messi Kembali Ke Barca? Laporta Akui Bertemu A...</td>
-      <td>APA YANG TERJADI?    Laporta telah telah melak...</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>Liverpool &amp; FSG Mesra, Transfer Lancar, Klopp ...</td>
-      <td>APA YANG TERJADI? Ada desas-desus yang mengata...</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>Ada Ronaldo, MU Enggak Bakal Malu-Maluin 🤔</td>
-      <td>APA YANG TERJADI? Manchester United mengalami ...</td>
-    </tr>
-  </tbody>
-</table>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">61</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">529</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span><span class="s2">         return resp</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">645</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span><span class="s2">             if not chunked:</span>
+<span class="ne">--&gt; </span><span class="mi">440</span><span class="s2">                 resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span><span class="s2">                     method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                     url=url,</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">             # Make the request on the httplib connection object.</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">             httplib_response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">                 method,</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">                     # Python 3 (including for exceptions like SystemExit).</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">                     # Otherwise it looks like a bug in the code.</span>
+<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">                     six.raise_from(e, None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">         except (SocketTimeout, BaseSSLError, SocketError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                 # Python 3</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span><span class="s2">                 try:</span>
+<span class="ne">--&gt; </span><span class="mi">444</span><span class="s2">                     httplib_response = conn.getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="s2">                 except BaseException as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">446</span><span class="s2">                     # Remove the TypeError from the exception chain in</span>
+
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1377</span><span class="s2">                 response.begin()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1378</span><span class="s2">             except ConnectionError:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1379</span><span class="s2">                 self.close()</span>
+
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span><span class="s2">         # read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">         while True:</span>
+<span class="ne">--&gt; </span><span class="mi">320</span><span class="s2">             version, status, reason = self._read_status()</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span><span class="s2">             if status != CONTINUE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="s2">                 break</span>
+
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">     def _read_status(self):</span>
+<span class="ne">--&gt; </span><span class="mi">281</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+
+<span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         while True:</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">704</span><span class="s2">                 return self._sock.recv_into(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">             except timeout:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">                 self._timeout_occurred = True</span>
+
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
+<span class="g g-Whitespace">   </span><span class="mi">1241</span><span class="s2">                   self.__class__)</span>
+<span class="ne">-&gt; </span><span class="mi">1242</span><span class="s2">             return self.read(nbytes, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1243</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1244</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="s2">             if buffer is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">1100</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1102</span><span class="s2">                 return self._sslobj.read(len)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fd00510a-f13d-4caa-b180-3747a0f049ee')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-fd00510a-f13d-4caa-b180-3747a0f049ee button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fd00510a-f13d-4caa-b180-3747a0f049ee');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div>
 </div>
 </div>
 <div class="section" id="export-to-csv">
@@ -873,41 +627,7 @@ Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">9</span><span class="n">da636eb98b5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/prosaindata//tugas/CrawlingWebBeritaBola.csv&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">100</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>       <span class="n">mountpoint</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span>       <span class="s1">&#39;TBE_EPHEM_CREDS_ADDR&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="n">ephemeral</span> <span class="k">else</span> <span class="n">_os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TBE_CREDS_ADDR&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">123</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span> 
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
 </pre></div>
 </div>
 </div>
@@ -941,7 +661,10 @@ Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-p
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="crawling%20twitter%20with%20twint.html"
@@ -961,7 +684,10 @@ Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-p
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -991,7 +717,7 @@ Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.9/dist-p
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1021,7 +747,7 @@ By Fajrul Ihsan Kamil
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1030,8 +756,8 @@ By Fajrul Ihsan Kamil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -30,7 +30,7 @@ twint.run.Search(config)
 
 [0;31m[0m
 [0;31mAttributeError[0mTraceback (most recent call last)
-[0;32m<ipython-input-3-823c864ed6b3>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-3-823c864ed6b3>[0m in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0;31m [0mconfig[0m [0;34m=[0m [0mtwint[0m[0;34m.[0m[0mConfig[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mconfig[0m[0;34m.[0m[0mSearch[0m [0;34m=[0m [0;34m"Cak Imin"[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m [0mconfig[0m[0;34m.[0m[0mLang[0m [0;34m=[0m [0;34m"id"[0m[0;34m[0m[0;34m[0m[0m
