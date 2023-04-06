@@ -32,8 +32,10 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['#Masukkan url yang akan digunakan untuk crawling', "url = 'https://www.goal.com/id/berita/'", '', 'headers={', "    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'"]
-...
-['df_Isi = pd.DataFrame(listIsi, columns=["Isi Berita"])', '', 'data = pd.concat([df_Judul, df_Isi], axis=1)', 'data = data.loc[0:50]', 'data']
+from google.colab import drive
+drive.mount('/content/drive')
+path = '/content/drive/My Drive/prosaindata//tugas/CrawlingWebBeritaBola.csv'
+with open(path, 'w', encoding = 'utf-8-sig') as f:
+  data.to_csv(f)
 -------------------
 
