@@ -443,7 +443,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d9297b3-b20c-457c-b040-9bb84841e407">
+  <div id="df-e2431fda-abff-49da-acca-77a022613b79">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -539,7 +539,7 @@ document.write(`
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d9297b3-b20c-457c-b040-9bb84841e407')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e2431fda-abff-49da-acca-77a022613b79')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -590,12 +590,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d9297b3-b20c-457c-b040-9bb84841e407 button.colab-df-convert');
+          document.querySelector('#df-e2431fda-abff-49da-acca-77a022613b79 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d9297b3-b20c-457c-b040-9bb84841e407');
+          const element = document.querySelector('#df-e2431fda-abff-49da-acca-77a022613b79');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -625,7 +625,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e10b57ea-5ccc-49be-8e33-baa373a38ea9">
+  <div id="df-d5dc26aa-507d-4ef6-8504-ad253c1ae736">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -709,7 +709,7 @@ document.write(`
 </table>
 <p>805 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e10b57ea-5ccc-49be-8e33-baa373a38ea9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d5dc26aa-507d-4ef6-8504-ad253c1ae736')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -760,12 +760,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e10b57ea-5ccc-49be-8e33-baa373a38ea9 button.colab-df-convert');
+          document.querySelector('#df-d5dc26aa-507d-4ef6-8504-ad253c1ae736 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e10b57ea-5ccc-49be-8e33-baa373a38ea9');
+          const element = document.querySelector('#df-d5dc26aa-507d-4ef6-8504-ad253c1ae736');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3624,6 +3624,175 @@ ringkasan, dengan penerapannya pada seleksi fitur bobot kata.</p>
 <h2>Pemodelan K-Means Clustering<a class="headerlink" href="#pemodelan-k-means-clustering" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kategori&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;RPL&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;,
+       &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;, &#39;KOMPUTASI&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">le</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LabelEncoder()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LabelEncoder</label><div class="sk-toggleable__content"><pre>LabelEncoder()</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yBaru</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="n">cluster_K</span> <span class="o">=</span> <span class="n">KMeans</span> <span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">init</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">)</span>
 <span class="n">fitted_K</span> <span class="o">=</span> <span class="n">cluster_K</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">principal_abstrak_Df</span><span class="p">)</span>
@@ -3640,7 +3809,7 @@ ringkasan, dengan penerapannya pada seleksi fitur bobot kata.</p>
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-468f3d70-9a4e-463a-80e1-85dcfb2f8261">
+  <div id="df-8909543b-96ee-4999-ac34-ba84004ac534">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3736,7 +3905,7 @@ ringkasan, dengan penerapannya pada seleksi fitur bobot kata.</p>
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-468f3d70-9a4e-463a-80e1-85dcfb2f8261')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8909543b-96ee-4999-ac34-ba84004ac534')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3787,12 +3956,12 @@ ringkasan, dengan penerapannya pada seleksi fitur bobot kata.</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-468f3d70-9a4e-463a-80e1-85dcfb2f8261 button.colab-df-convert');
+          document.querySelector('#df-8909543b-96ee-4999-ac34-ba84004ac534 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-468f3d70-9a4e-463a-80e1-85dcfb2f8261');
+          const element = document.querySelector('#df-8909543b-96ee-4999-ac34-ba84004ac534');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3812,6 +3981,51 @@ ringkasan, dengan penerapannya pada seleksi fitur bobot kata.</p>
     </div>
   </div>
   </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Visualising the clusters</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hasil Clustering Menggunakan  K-Means&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">fitted_K</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">fitted_K</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;RPL&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">fitted_K</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">fitted_K</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Komputasi&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plotting the centroids of the clusters</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">cluster_K</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">cluster_K</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Centroids&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa6c85b3be0&gt;
+</pre></div>
+</div>
+<img alt="_images/4a260fafb06f6298b8be1af83a997e5758ccc2094d68df94c327bf6f1be0c544.png" src="_images/4a260fafb06f6298b8be1af83a997e5758ccc2094d68df94c327bf6f1be0c544.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RPL&#39;</span><span class="p">,</span> <span class="s1">&#39;KOMPUTASI&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">yBaru</span><span class="p">,</span><span class="n">cluster_K</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span><span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+         RPL       0.61      0.81      0.70       534
+   KOMPUTASI       0.00      0.00      0.00       271
+
+    accuracy                           0.54       805
+   macro avg       0.31      0.40      0.35       805
+weighted avg       0.41      0.54      0.46       805
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="splitting-data-for-klasifikasi-teks">
