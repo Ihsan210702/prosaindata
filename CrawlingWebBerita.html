@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="CrawlingWebPTA.html">CRAWLING WEBSITE PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipelines.html">Pipelines menggunakan Orchest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">Klasifikasi Teks (UTS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Graph.html"><strong>PageRank</strong></a></li>
 </ul>
 
     </div>
@@ -420,10 +421,10 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (2.27.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests) (1.26.15)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests) (3.4)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests) (2.0.12)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests) (2022.12.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests) (2.0.12)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests) (3.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests) (1.26.15)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
@@ -502,11 +503,11 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-3-19009141d11f&gt;</span> in <span class="ni">&lt;cell line: 13&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> 
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">if</span> <span class="n">link</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>       <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.goal.com/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">link</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>       <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>       <span class="n">items2</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="s2">&quot;article-body_body__JAkqy body&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1">#proses perulangan untuk crawling data</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">14</span>   <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">page</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>   <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>   <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">)</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="s2">&quot;&quot;&quot;</span>
@@ -530,62 +531,60 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist
 <span class="g g-Whitespace">    </span><span class="mi">531</span><span class="s2">         return resp</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">645</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">685</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">686</span><span class="s2">         if not stream:</span>
+<span class="ne">--&gt; </span><span class="mi">687</span><span class="s2">             r.content</span>
+<span class="g g-Whitespace">    </span><span class="mi">688</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">689</span><span class="s2">         return r</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">438</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">    </span><span class="mi">439</span><span class="s2">             if not chunked:</span>
-<span class="ne">--&gt; </span><span class="mi">440</span><span class="s2">                 resp = conn.urlopen(</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span><span class="s2">                     method=request.method,</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                     url=url,</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/models.py</span> in <span class="ni">content</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">836</span><span class="s2">                 self._content = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">837</span><span class="s2">             else:</span>
+<span class="ne">--&gt; </span><span class="mi">838</span><span class="s2">                 self._content = b&#39;&#39;.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b&#39;&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">839</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">840</span><span class="s2">         self._content_consumed = True</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">             # Make the request on the httplib connection object.</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">             httplib_response = self._make_request(</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 conn,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">                 method,</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/requests/models.py</span> in <span class="ni">generate</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">758</span><span class="s2">             if hasattr(self.raw, &#39;stream&#39;):</span>
+<span class="g g-Whitespace">    </span><span class="mi">759</span><span class="s2">                 try:</span>
+<span class="ne">--&gt; </span><span class="mi">760</span><span class="s2">                     for chunk in self.raw.stream(chunk_size, decode_content=True):</span>
+<span class="g g-Whitespace">    </span><span class="mi">761</span><span class="s2">                         yield chunk</span>
+<span class="g g-Whitespace">    </span><span class="mi">762</span><span class="s2">                 except ProtocolError as e:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">                     # Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">                     # Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">                     six.raise_from(e, None)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">         except (SocketTimeout, BaseSSLError, SocketError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/response.py</span> in <span class="ni">stream</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">626</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">627</span><span class="s2">             while not is_fp_closed(self._fp):</span>
+<span class="ne">--&gt; </span><span class="mi">628</span><span class="s2">                 data = self.read(amt=amt, decode_content=decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">629</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">630</span><span class="s2">                 if data:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/response.py</span> in <span class="ni">read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">566</span><span class="s2">         with self._error_catcher():</span>
+<span class="ne">--&gt; </span><span class="mi">567</span><span class="s2">             data = self._fp_read(amt) if not fp_closed else b&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">             if amt is None:</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span><span class="s2">                 flush_decoder = True</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                 # Python 3</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span><span class="s2">                 try:</span>
-<span class="ne">--&gt; </span><span class="mi">444</span><span class="s2">                     httplib_response = conn.getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="s2">                 except BaseException as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span><span class="s2">                     # Remove the TypeError from the exception chain in</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/response.py</span> in <span class="ni">_fp_read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span><span class="s2">             # StringIO doesn&#39;t like amt=None</span>
+<span class="ne">--&gt; </span><span class="mi">533</span><span class="s2">             return self._fp.read(amt) if amt is not None else self._fp.read()</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="s2">     def read(self, amt=None, decode_content=None, cache_content=False):</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span><span class="s2">                 response.begin()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span><span class="s2">             except ConnectionError:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1379</span><span class="s2">                 self.close()</span>
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span><span class="s2">             # Amount is given, implement using readinto</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span><span class="s2">             b = bytearray(amt)</span>
+<span class="ne">--&gt; </span><span class="mi">463</span><span class="s2">             n = self.readinto(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span><span class="s2">             return memoryview(b)[:n].tobytes()</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span><span class="s2">         else:</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span><span class="s2">         # read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">         while True:</span>
-<span class="ne">--&gt; </span><span class="mi">320</span><span class="s2">             version, status, reason = self._read_status()</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span><span class="s2">             if status != CONTINUE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="s2">                 break</span>
-
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">     def _read_status(self):</span>
-<span class="ne">--&gt; </span><span class="mi">281</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span><span class="s2">         # connection, and the user is reading more bytes than will be provided</span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span><span class="s2">         # (for example, reading in 1k chunks)</span>
+<span class="ne">--&gt; </span><span class="mi">507</span><span class="s2">         n = self.fp.readinto(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span><span class="s2">         if not n and b:</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span><span class="s2">             # Ideally, we would raise IncompleteRead if the content-length</span>
 
 <span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
 <span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         while True:</span>
